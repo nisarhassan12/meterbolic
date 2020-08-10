@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import Logo from '../resources/logo.svg';
 import React from 'react';
 import { breakpoints } from '../styles/variables';
@@ -31,7 +32,9 @@ const Nav = () => (
   <StyledNav>
     <div className="row">
       <nav role="navigation">
-        <img src={Logo} className="logo" alt="Meterbolic" />
+        <Link to="/">
+          <img src={Logo} className="logo" alt="Meterbolic" />
+        </Link>
         <a className="btn btn--primary" href="https://meterbolic.org/">
           Back to the Site
         </a>

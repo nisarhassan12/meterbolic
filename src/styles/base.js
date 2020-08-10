@@ -12,6 +12,7 @@ const BaseStyles = () => (
 
       :root {
         --font-size-default: 2rem;
+        --font-size-medium: 3rem;
         --font-size-huge: 7rem;
 
         --font-family: 'Jost', sans-serif;
@@ -21,12 +22,18 @@ const BaseStyles = () => (
         --gutter-huge: 10rem;
         --gutter-medium: 5rem;
         --gutter-normal: 3rem;
+        --gutter-small: 2rem;
+        --gutter-small-1: 1.5rem;
+        --gutter-small-2: 1rem;
+        --gutter-small-3: 0.8rem;
+
+        --textContainerNormal: 840px;
 
         --offWhite: #eee;
         --offWhite1: #f8f8f8;
         --white: #fff;
         --black-1: #444;
-        --primary-green: #5fcf80;
+        --primary-green: #4ec274;
 
         --border-light: 1px solid #eee;
       }
@@ -60,6 +67,7 @@ const BaseStyles = () => (
         color: var(--black-1);
         font-size: var(--font-size-default);
         font-family: var(--font-family);
+        line-height: 1.5;
         font-weight: 300;
         background: var(--offWhite1);
       }
@@ -82,10 +90,17 @@ const BaseStyles = () => (
       h2,
       h3 {
         font-weight: 300;
+        line-height: 1.1;
       }
 
       h1 {
         font-size: var(--font-size-huge);
+        margin-bottom: var(--gutter-normal);
+      }
+
+      h3 {
+        font-size: var(--font-size-medium);
+        margin-bottom: var(--gutter-small);
       }
 
       /* ---------------------------------- */
@@ -100,7 +115,7 @@ const BaseStyles = () => (
         display: inline-block;
         text-decoration: none;
         border: 1px solid;
-        padding: 0.8rem 3.2rem;
+        padding: 0.7rem 2.5rem;
         border-radius: 100px;
         color: var(--black-1);
         font-weight: 400;
@@ -110,6 +125,14 @@ const BaseStyles = () => (
           background: var(--primary-green);
           border-color: var(--primary-green);
         }
+      }
+
+      /* ---------------------------------- */
+      /* ----- Lists ----- */
+      /* ---------------------------------- */
+
+      ul {
+        list-style-position: inside;
       }
     `}
   />
