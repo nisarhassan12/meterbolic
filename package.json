@@ -1,0 +1,21 @@
+{
+  "name": "meterbolic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nisarhassan12/meterbolic.git",
+  "author": "Nisar Hassan Naqvi <syednisarhassan12@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "gatsby": "^2.24.35",
+    "gatsby-plugin-emotion": "^4.3.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  }
+}
