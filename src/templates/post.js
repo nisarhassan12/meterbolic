@@ -1,7 +1,8 @@
+import { Link, graphql } from 'gatsby';
+
 import Layout from '../layouts/index';
 import React from 'react';
 import { breakpoints } from '../styles/variables';
-import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 
 const StyledPostTemplate = styled.div`
@@ -12,7 +13,8 @@ const StyledPostTemplate = styled.div`
   border: var(--border-light);
 
   .container {
-    padding-left: var(--gutter-small);
+    padding-left: var(--gutter-normal);
+    padding-right: var(--gutter-normal);
   }
 
   .date {
@@ -45,6 +47,11 @@ const StyledPostTemplate = styled.div`
   li + li {
     margin-top: var(--gutter-small-3);
   }
+
+  .back {
+    display: inline-block;
+    margin-top: var(--gutter-medium);
+  }
 `;
 
 export const query = graphql`
@@ -64,13 +71,21 @@ export const query = graphql`
 const PostTemplate = ({ data }) => {
   const title = data.markdownRemark.frontmatter.title;
   const teaser = data.markdownRemark.frontmatter.teaser;
+  const date = data.markdownRemark.frontmatter.date;
   return (
     <Layout>
       <div className="row">
         <StyledPostTemplate>
           <div className="container">
             <h1>{title}</h1>
-            <div className="date">{data.markdownRemark.frontmatter.date}</div>
+            <div className="date">
+              {new Date(date).toLocaleDateString('en-GB', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </div>
           </div>
           {teaser ? (
             <div
@@ -82,6 +97,9 @@ const PostTemplate = ({ data }) => {
             <div
               dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
+            <Link className="back" to="/">
+              Go Back &nbsp;&rarr;
+            </Link>
           </div>
         </StyledPostTemplate>
       </div>

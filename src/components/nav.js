@@ -36,7 +36,7 @@ const Nav = () => (
           <img src={Logo} className="logo" alt="Meterbolic" />
         </Link>
         <a className="btn btn--primary" href="https://meterbolic.org/">
-          Back to the Site
+          Main Site
         </a>
       </nav>
     </div>
