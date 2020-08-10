@@ -11,6 +11,10 @@ const StyledPost = styled(Link)`
   text-decoration: none;
   color: inherit;
 
+  @media (max-width: 780px) {
+    flex-direction: column;
+  }
+
   .img {
     min-height: 25rem;
     flex: 0 0 35%;
