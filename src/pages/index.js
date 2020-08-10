@@ -23,14 +23,16 @@ export const IndexPageQuery = graphql`
 `;
 
 const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes.map((post) => ({
-    id: post.id,
-    slug: post.fields.slug,
-    title: post.frontmatter.title,
-    date: post.frontmatter.date,
-    teaser: post.frontmatter.teaser,
-    excerpt: post.excerpt,
-  }));
+  const posts = data.allMarkdownRemark.nodes
+    .map((post) => ({
+      id: post.id,
+      slug: post.fields.slug,
+      title: post.frontmatter.title,
+      date: new Date(post.frontmatter.date),
+      teaser: post.frontmatter.teaser,
+      excerpt: post.excerpt,
+    }))
+    .sort((a, b) => b.date - a.date);
   return (
     <Layout>
       <Posts posts={posts} />

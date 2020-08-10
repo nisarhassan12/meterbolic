@@ -47,7 +47,14 @@ const Post = ({ title, date, excerpt, teaser, slug }) => (
     ></div>
     <div className="text">
       <h3>{title}</h3>
-      <p className="date">{date}</p>
+      <p className="date">
+        {new Date(date).toLocaleDateString('en-GB', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </p>
       <p className="excerpt">{excerpt}</p>
       <Link to={`/blog/${slug}`} className="btn btn--primary">
         Read More <span>&nbsp;&rarr;</span>

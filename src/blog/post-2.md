@@ -1,6 +1,6 @@
 ---
 title: Post 2
-date: Sun Aug 30 2020 00:00:00 GMT+0500
+date: Sun Aug 1 2020 00:00:00 GMT+0500
 teaser: teaser.jpg
 ---
 
