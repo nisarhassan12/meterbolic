@@ -109,6 +109,13 @@ const BaseStyles = () => (
 
       a {
         cursor: pointer;
+        color: #0097f7;
+        transition: all 0.2s;
+
+        &::hover,
+        &:focus {
+          color: #0172f7;
+        }
       }
 
       .btn {
