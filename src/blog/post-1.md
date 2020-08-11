@@ -11,6 +11,8 @@ Dicta excepturi consequuntur eveniet, dignissimos inventore atque quam autem, ma
 
 Ut exercitationem minus, dicta provident esse sunt similique officia doloribus modi earum veniam quia mollitia. Molestias quaerat iure magni libero, cumque sit voluptas magnam doloremque tempora molestiae laudantium numquam illum.
 
+![alt text](/post-1.jpg 'Logo Title Text 1')
+
 ## Subtitle
 
 Earum magni minus odio obcaecati aliquid fuga! Cumque aspernatur iure libero debitis sint sequi officia mollitia saepe architecto impedit, voluptate tempora assumenda doloribus ad natus, est ex enim dolorum ut!

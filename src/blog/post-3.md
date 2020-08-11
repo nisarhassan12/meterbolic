@@ -9,7 +9,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ratione illo numqua
 
 Dicta excepturi consequuntur eveniet, dignissimos inventore atque quam autem, magni placeat ipsum rem asperiores, ad voluptatem omnis! Ipsam, quis deleniti sequi, commodi culpa ab aspernatur aperiam in ipsum quaerat suscipit!
 
+![alt text](/post-1.jpg 'Logo Title Text 1')
+
 Ut exercitationem minus, dicta provident esse sunt similique officia doloribus modi earum veniam quia mollitia. Molestias quaerat iure magni libero, cumque sit voluptas magnam doloremque tempora molestiae laudantium numquam illum.
+
+![alt text](/teaser.jpg 'Logo Title Text 1')
 
 ## Subtitle
 

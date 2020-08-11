@@ -36,10 +36,6 @@ const StyledPostTemplate = styled.div`
     margin: var(--gutter-medium) 0 var(--gutter-small);
   }
 
-  p + p {
-    margin-top: var(--gutter-small);
-  }
-
   ul {
     margin: var(--gutter-small) 0;
   }
@@ -48,9 +44,9 @@ const StyledPostTemplate = styled.div`
     margin-top: var(--gutter-small-3);
   }
 
-  .back {
-    display: inline-block;
-    margin-top: var(--gutter-medium);
+  img {
+    max-width: 100%;
+    margin-bottom: var(--gutter-small);
   }
 `;
 

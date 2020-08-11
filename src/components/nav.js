@@ -32,12 +32,12 @@ const Nav = () => (
   <StyledNav>
     <div className="row">
       <nav role="navigation">
-        <Link to="/">
+        <a href="https://meterbolic.org/">
           <img src={Logo} className="logo" alt="Meterbolic" />
-        </Link>
-        <a className="btn btn--primary" href="https://meterbolic.org/">
-          Main Site
         </a>
+        <Link className="btn btn--primary" to="/about">
+          About Us
+        </Link>
       </nav>
     </div>
   </StyledNav>

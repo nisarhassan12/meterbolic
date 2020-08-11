@@ -28,6 +28,7 @@ const BaseStyles = () => (
         --gutter-small-3: 0.8rem;
 
         --textContainerNormal: 840px;
+        --textContainerSmall: 760px;
 
         --offWhite: #eee;
         --offWhite1: #f8f8f8;
@@ -79,7 +80,7 @@ const BaseStyles = () => (
       }
 
       section {
-        padding: var(--gutter-huge);
+        padding: var(--gutter-medium) 0;
       }
 
       /* ---------------------------------- */
@@ -101,6 +102,10 @@ const BaseStyles = () => (
       h3 {
         font-size: var(--font-size-medium);
         margin-bottom: var(--gutter-small);
+      }
+
+      p + p {
+        margin-top: var(--gutter-normal);
       }
 
       /* ---------------------------------- */
@@ -132,6 +137,11 @@ const BaseStyles = () => (
           background: var(--primary-green);
           border-color: var(--primary-green);
         }
+      }
+
+      .back {
+        display: inline-block;
+        margin-top: var(--gutter-medium);
       }
 
       /* ---------------------------------- */
