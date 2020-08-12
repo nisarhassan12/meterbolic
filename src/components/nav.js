@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import Logo from '../resources/logo.svg';
 import React from 'react';
 import { breakpoints } from '../styles/variables';
@@ -35,7 +34,7 @@ const Nav = () => (
         <a href="https://meterbolic.org/">
           <img src={Logo} className="logo" alt="Meterbolic" />
         </a>
-        <a href="https://meterbolic.org/">
+        <a href="https://meterbolic.org/" className="btn btn--primary">
           About Us
         </a>
       </nav>

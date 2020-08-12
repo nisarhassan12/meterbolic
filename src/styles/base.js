@@ -14,6 +14,7 @@ const BaseStyles = () => (
         --font-size-default: 2rem;
         --font-size-medium: 3rem;
         --font-size-huge: 7rem;
+        --font-size-large: 5.5rem;
 
         --font-family: 'Jost', sans-serif;
 
@@ -99,6 +100,11 @@ const BaseStyles = () => (
         margin-bottom: var(--gutter-normal);
       }
 
+      h2 {
+        font-size: var(--font-size-large);
+        margin-bottom: var(--gutter-small);
+      }
+
       h3 {
         font-size: var(--font-size-medium);
         margin-bottom: var(--gutter-small);
@@ -145,10 +151,18 @@ const BaseStyles = () => (
       }
 
       /* ---------------------------------- */
+      /* ----- Buttons & Links ----- */
+      /* ---------------------------------- */
+
+      img {
+        object-fit: contain;
+      }
+
+      /* ---------------------------------- */
       /* ----- Lists ----- */
       /* ---------------------------------- */
 
-      ul {
+      ul, ol {
         list-style-position: inside;
       }
     `}

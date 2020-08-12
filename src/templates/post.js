@@ -1,7 +1,9 @@
 import { Link, graphql } from 'gatsby';
 
+import Author from '../components/author';
 import Layout from '../layouts/index';
 import React from 'react';
+import { authors } from '../data/authors';
 import { breakpoints } from '../styles/variables';
 import styled from '@emotion/styled';
 
@@ -25,6 +27,8 @@ const StyledPostTemplate = styled.div`
     height: 40rem;
     background-size: cover;
     background-position: center;
+    border-top:  var(--border-light);
+    border-bottom:  var(--border-light);
     margin-bottom: var(--gutter-small);
 
     @media (max-width: ${breakpoints.medium}) {
@@ -36,12 +40,13 @@ const StyledPostTemplate = styled.div`
     margin: var(--gutter-medium) 0 var(--gutter-small);
   }
 
-  ul {
-    margin: var(--gutter-small) 0;
+  ul, 
+  ol {
+    margin: var(--gutter-normal) 0;
   }
 
   li + li {
-    margin-top: var(--gutter-small-3);
+    margin-top: var(--gutter-small);
   }
 
   img {
@@ -57,6 +62,7 @@ export const query = graphql`
         title
         date
         teaser
+        author
       }
       excerpt
       html
@@ -68,31 +74,28 @@ const PostTemplate = ({ data }) => {
   const title = data.markdownRemark.frontmatter.title;
   const teaser = data.markdownRemark.frontmatter.teaser;
   const date = data.markdownRemark.frontmatter.date;
+  const author = data.markdownRemark.frontmatter.author;
+
   return (
     <Layout>
       <div className="row">
         <StyledPostTemplate>
           <div className="container">
             <h1>{title}</h1>
-            <div className="date">
-              {new Date(date).toLocaleDateString('en-GB', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </div>
           </div>
           {teaser ? (
             <div
               className="teaser"
-              style={{ backgroundImage: `url(/${teaser})` }}
+              style={teaser ?  { backgroundImage: `url(/${teaser})` } : null}
             />
           ) : null}
           <div className="container">
             <div
               dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
+
+            {authors[author] ? <Author {...authors[author]} date={date}/> : null}
+
             <Link className="back" to="/">
               Go Back &nbsp;&rarr;
             </Link>
