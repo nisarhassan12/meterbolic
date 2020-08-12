@@ -3,12 +3,27 @@ module.exports = {
     title: 'Meterbolic',
   },
   plugins: [
-    `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/blog`,
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              name: `blog`,
+              path: `${__dirname}/src/blog`,
+            },
+          },
+        ],
       },
     },
   ],
