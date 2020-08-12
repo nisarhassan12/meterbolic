@@ -35,9 +35,9 @@ const Nav = () => (
         <a href="https://meterbolic.org/">
           <img src={Logo} className="logo" alt="Meterbolic" />
         </a>
-        <Link className="btn btn--primary" to="/about">
+        <a href="https://meterbolic.org/">
           About Us
-        </Link>
+        </a>
       </nav>
     </div>
   </StyledNav>
