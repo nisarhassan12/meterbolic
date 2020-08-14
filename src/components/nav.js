@@ -1,4 +1,5 @@
 import Logo from '../resources/logo.svg';
+
 import React from 'react';
 import { breakpoints } from '../styles/variables';
 import styled from '@emotion/styled';
@@ -35,7 +36,7 @@ const Nav = () => (
           <img src={Logo} className="logo" alt="Meterbolic" />
         </a>
         <a href="https://meterbolic.org/" className="btn btn--primary">
-          About Us
+              Join Meterbolic!
         </a>
       </nav>
     </div>

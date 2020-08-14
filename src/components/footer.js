@@ -14,7 +14,7 @@ const Footer = () => (
       <p>
         &copy; {new Date().getFullYear()}{' '}
         <a href="https://meterbolic.org/" target="_blank" rel="noopener">
-          Meterbolic.
+          Meterbolic Project
         </a>
       </p>
     </div>
