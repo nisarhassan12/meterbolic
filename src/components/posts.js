@@ -9,7 +9,7 @@ const StyledPosts = styled.section`
 const Posts = ({ posts }) => (
   <StyledPosts>
     <div className="row">
-      <h1>Blog</h1>
+      <h1></h1>
       <div className="posts">
         {posts.map((post) => (
           <Post key={post.id} {...post} />
