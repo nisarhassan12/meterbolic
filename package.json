@@ -5,6 +5,9 @@
   "repository": "https://github.com/nisarhassan12/meterbolic.git",
   "author": "Nisar Hassan Naqvi <syednisarhassan12@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "gatsby develop"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
